@@ -9,9 +9,9 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
-#import "SearchViewController.h"
+#import "TextFieldViewController.h"
 
-@interface SearchViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface TextFieldViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
 // 全部的数据源数组
 @property (strong, nonatomic) NSArray *dataArr;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation SearchViewController
+@implementation TextFieldViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +34,7 @@
 
 - (void)configureUI{
     self.view.backgroundColor = [UIColor whiteColor];
+    
     self.searchField.frame = CGRectMake(10, 74, ScreenWidth-20, 30);
     [self.view addSubview:self.searchField];
     
@@ -56,9 +57,27 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-    cell.textLabel.text = self.resultArrM[indexPath.row];
+    cell.textLabel.textColor = [UIColor blackColor];
+    NSString *title = self.resultArrM[indexPath.row];
+    // 将搜索的关键字变为红色
+    if (self.searchField.text.length > 0) {
+        NSMutableAttributedString *attributeStr = [[NSMutableAttributedString alloc]initWithString:title];
+        NSRange range = [title rangeOfString:self.searchField.text];
+        [attributeStr addAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} range:range];
+        cell.textLabel.attributedText = attributeStr;
+    }else{
+        cell.textLabel.text = title;
+    }
+    
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:self.dataArr[indexPath.row] delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)searchFieldEditingChanged:(UITextField *)searchField{
@@ -71,7 +90,6 @@
     [self.tableView reloadData];
 }
 
-
 #pragma mark - 懒加载
 
 - (UITextField *)searchField{
@@ -83,6 +101,7 @@
         _searchField.placeholder = @"请输入要搜索的文字";
         _searchField.layer.cornerRadius = 8;
         _searchField.clipsToBounds = YES;
+        _searchField.delegate = self;
         _searchField.backgroundColor = [UIColor colorWithRed:242/255.0 green:242/255.0 blue:241/255.0 alpha:1];
         [_searchField addTarget:self action:@selector(searchFieldEditingChanged:) forControlEvents:UIControlEventEditingChanged];
     }

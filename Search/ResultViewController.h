@@ -10,4 +10,10 @@
 
 @interface ResultViewController : UIViewController
 
+// 搜索的结果数组
+@property (strong, nonatomic) NSArray *resultArr;
+
+// 搜索的关键字
+@property (copy, nonatomic) NSString *keyWord;
+
 @end

@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C75F6A9F1EB1CA2E00D7116A /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75F6A9E1EB1CA2E00D7116A /* ResultViewController.m */; };
 		C777FD271EB0727400667DED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C777FD261EB0727400667DED /* main.m */; };
 		C777FD2A1EB0727400667DED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C777FD291EB0727400667DED /* AppDelegate.m */; };
 		C777FD2D1EB0727400667DED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C777FD2C1EB0727400667DED /* ViewController.m */; };
 		C777FD301EB0727400667DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C777FD2E1EB0727400667DED /* Main.storyboard */; };
 		C777FD321EB0727400667DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C777FD311EB0727400667DED /* Assets.xcassets */; };
 		C777FD351EB0727400667DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C777FD331EB0727400667DED /* LaunchScreen.storyboard */; };
+		C777FD3E1EB072EC00667DED /* TextFieldViewController..m in Sources */ = {isa = PBXBuildFile; fileRef = C777FD3D1EB072EC00667DED /* TextFieldViewController..m */; };
+		C777FD411EB082FF00667DED /* SearchControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C777FD401EB082FF00667DED /* SearchControllerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C75F6A9D1EB1CA2E00D7116A /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		C75F6A9E1EB1CA2E00D7116A /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		C777FD221EB0727400667DED /* Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C777FD261EB0727400667DED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C777FD281EB0727400667DED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,10 @@
 		C777FD311EB0727400667DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C777FD341EB0727400667DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C777FD361EB0727400667DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C777FD3C1EB072EC00667DED /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
+		C777FD3D1EB072EC00667DED /* TextFieldViewController..m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController..m; sourceTree = "<group>"; };
+		C777FD3F1EB082FF00667DED /* SearchControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchControllerViewController.h; sourceTree = "<group>"; };
+		C777FD401EB082FF00667DED /* SearchControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				C777FD291EB0727400667DED /* AppDelegate.m */,
 				C777FD2B1EB0727400667DED /* ViewController.h */,
 				C777FD2C1EB0727400667DED /* ViewController.m */,
+				C777FD3C1EB072EC00667DED /* TextFieldViewController.h */,
+				C777FD3D1EB072EC00667DED /* TextFieldViewController..m */,
+				C777FD3F1EB082FF00667DED /* SearchControllerViewController.h */,
+				C777FD401EB082FF00667DED /* SearchControllerViewController.m */,
+				C75F6A9D1EB1CA2E00D7116A /* ResultViewController.h */,
+				C75F6A9E1EB1CA2E00D7116A /* ResultViewController.m */,
 				C777FD2E1EB0727400667DED /* Main.storyboard */,
 				C777FD311EB0727400667DED /* Assets.xcassets */,
 				C777FD331EB0727400667DED /* LaunchScreen.storyboard */,
@@ -151,8 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C777FD2D1EB0727400667DED /* ViewController.m in Sources */,
+				C75F6A9F1EB1CA2E00D7116A /* ResultViewController.m in Sources */,
+				C777FD411EB082FF00667DED /* SearchControllerViewController.m in Sources */,
 				C777FD2A1EB0727400667DED /* AppDelegate.m in Sources */,
 				C777FD271EB0727400667DED /* main.m in Sources */,
+				C777FD3E1EB072EC00667DED /* TextFieldViewController..m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Search/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.sunyingjian.Search;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Search/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.sunyingjian.Search;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +329,7 @@
 				C777FD3B1EB0727400667DED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
